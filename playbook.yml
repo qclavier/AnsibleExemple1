@@ -1,0 +1,15 @@
+---
+- hosts: all # liste les hotes
+  become: true # pour executer en admin (true) ou pas (false)
+  tasks: # liste des taches a effectuer
+# Remplacer par le 'update_cache: yes' dans le 'name: install git'
+#   - name: update distribution # il s'agit du nom pas de la commande en elle-meme
+#     apt:
+#         update_cache: yes # module ansible équivalent de la commande 'apt-get update'
+  - name: install git
+    apt:
+        name:
+            - git
+            - nodejs
+            - npm
+        update_cache: yes 
