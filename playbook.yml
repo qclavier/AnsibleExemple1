@@ -15,5 +15,5 @@
 #       update_cache: yes
   - name: file configuration copy
     copy: 
-      src: 01-Exemple1/
+      src: conf/
       dest: /
