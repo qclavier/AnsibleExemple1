@@ -6,10 +6,14 @@
 #   - name: update distribution # il s'agit du nom pas de la commande en elle-meme
 #     apt:
 #         update_cache: yes # module ansible équivalent de la commande 'apt-get update'
-  - name: install git
-    apt:
-        name:
-            - git
-            - nodejs
-            - npm
-        update_cache: yes 
+# - name: install git
+#   apt:
+#       name:
+#           - git
+#           - nodejs
+#           - npm
+#       update_cache: yes
+  - name: file configuration copy
+    copy: 
+      src: 01-Exemple1/
+      dest: /
